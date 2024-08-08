@@ -2,10 +2,11 @@ const fs = require('fs');
 const axios = require('axios');
 const { Connection, PublicKey, clusterApiUrl } = require('@solana/web3.js'); // Import Solana Web3.js
 const splToken = require('@solana/spl-token');
+
 const mintAddressFile = 'mint_address.json';
 const marketCapFile = 'marketcap.json';
 const walletsFile = 'wallets.json';
-const intervalDuration = 1 * 60 * 1000; // 1 minute in milliseconds
+const intervalDuration = 60 * 1000; // 60 seconds in milliseconds
 
 // Function to format large numbers
 const formatNumber = (num) => {
@@ -127,6 +128,13 @@ const searchMintAddressesFromFile = async () => {
     const result = await searchMintAddress(mintAddress);
     if (result) {
       results.push(result);
+      // Notify user if market cap is greater than or equal to $75k
+      if (result.marketCap >= 75000) {
+        await bot.sendMessage(chatId, `Market CAP: **${formatNumber(result.marketCap)}**\nToken Name: **${result.tokenName.toUpperCase()}**\nMint Address: \`${result.mintAddress}\``, {
+          parse_mode: 'MarkdownV2',
+          disable_web_page_preview: true,
+        });
+      }
     }
   });
 
@@ -149,7 +157,7 @@ const startChecking = () => {
 
   searchMintAddressesFromFile(); // Initial call
   setInterval(() => {
-    searchMintAddressesFromFile(); // Set interval for 1 minute
+    searchMintAddressesFromFile(); // Set interval for 45 seconds
   }, intervalDuration);
 };
 

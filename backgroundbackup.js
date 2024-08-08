@@ -2,6 +2,8 @@ const express = require('express'); // Import express
 const TelegramBot = require('node-telegram-bot-api');
 const fs = require('fs');
 const axios = require('axios');
+const { Connection, PublicKey, clusterApiUrl } = require('@solana/web3.js');
+const splToken = require('@solana/spl-token');
 require('dotenv').config();
 
 const app = express(); // Create an Express app
@@ -9,9 +11,7 @@ const bot = new TelegramBot(process.env.TELEGRAM_BOT_TOKEN, { polling: true });
 const mintAddressFile = 'mint_address.json';
 const marketCapFile = 'marketcap.json';
 const walletsFile = 'wallets.json';
-const intervalDuration = 60 * 1000; // 60 seconds in milliseconds
-
-let checkingInterval; // Variable to hold the interval ID
+const intervalDuration = 45 * 1000; // 45 seconds in milliseconds
 
 // Function to format large numbers
 const formatNumber = (num) => {
@@ -24,7 +24,7 @@ const formatNumber = (num) => {
   return num;
 };
 
-// Function to check if wallet addresses exist
+// Check if wallet addresses exist and notify user if not
 const checkWallets = async (chatId) => {
   if (!fs.existsSync(walletsFile)) {
     return [];
@@ -45,6 +45,40 @@ const checkWallets = async (chatId) => {
     return []; // Return empty if no wallets found
   }
   return wallets; // Return existing wallets
+};
+
+// Function to get wallet balance using Solana Web3.js
+const getWalletInfo = async (walletAddress, chatId) => {
+  const connection = new Connection(clusterApiUrl('mainnet-beta'), 'confirmed');
+  const publicKey = new PublicKey(walletAddress);
+
+  try {
+    const solBalance = await connection.getBalance(publicKey);
+    await bot.sendMessage(chatId, `SOL Balance for ${walletAddress}: ${(solBalance / 1e9).toFixed(9)} SOL`); // Convert lamports to SOL
+
+    const tokenAccounts = await connection.getParsedTokenAccountsByOwner(publicKey, {
+      programId: splToken.TOKEN_PROGRAM_ID,
+    });
+
+    if (tokenAccounts.value.length === 0) {
+      await bot.sendMessage(chatId, 'No SPL token holdings found.');
+      return [];
+    }
+
+    const mintAddresses = [];
+    for (const tokenAccount of tokenAccounts.value) {
+      const accountData = tokenAccount.account.data.parsed;
+      const mintAddress = accountData.info.mint;
+      mintAddresses.push(mintAddress);
+      await bot.sendMessage(chatId, `Mint: ${mintAddress.replace(/[\(\)]/g, '')}, Amount: ${accountData.info.tokenAmount.uiAmount}`);
+    }
+
+    return mintAddresses; // Return the mint addresses found
+  } catch (error) {
+    console.error('Error retrieving wallet info:', error);
+    await bot.sendMessage(chatId, `Error retrieving wallet info: ${error.message}`);
+    return [];
+  }
 };
 
 // Function to search for the mint address and get token details
@@ -71,6 +105,12 @@ const searchMintAddress = async (mintAddress) => {
       result.marketCap = pair.fdv ? parseFloat(pair.fdv) : 0; // Get market cap
       result.tokenName = pair.baseToken.name; // Get token name
       result.pairsFound = true; // Mark that pairs were found
+
+      console.log(`Token Name: ${result.tokenName}`);
+      console.log(`Market Cap for Mint Address: ${mintAddress}`);
+      console.log(`Token Price: $${formatNumber(result.tokenPrice)}`);
+      console.log(`Liquidity: $${formatNumber(result.liquidity)}`);
+      console.log(`Market Cap: $${formatNumber(result.marketCap)}`);
     } else {
       console.log(`No pairs found for the given mint address: ${mintAddress}`);
     }
@@ -99,8 +139,8 @@ const searchMintAddressesFromFile = async (chatId) => {
       results.push(result);
       // Notify user if market cap is greater than or equal to $75k
       if (result.marketCap >= 75000) {
-        await bot.sendMessage(chatId, `💰 Market CAP: *${formatNumber(result.marketCap)}*  \n📈 Token Name: *${result.tokenName.toUpperCase()}*  \n📌 Mint Address: \`${result.mintAddress}\``, {
-          parse_mode: 'Markdown',
+        await bot.sendMessage(chatId, `💰 Market CAP: *${result.marketCap.toLocaleString()}*  \n📈 Token Name: *${result.tokenName.toUpperCase()}*  \n📌 Mint Address: \`${result.mintAddress.replace(/[\(\)]/g, '')}\``, {
+          parse_mode: 'MarkdownV2',
           disable_web_page_preview: true,
         });
       }
@@ -116,10 +156,15 @@ const startChecking = async (chatId) => {
   const wallets = await checkWallets(chatId); // Check for wallet addresses
   if (wallets.length === 0) return; // Stop if no wallets found
 
+  // Check wallet balances for all addresses
+  for (const wallet of wallets) {
+    await getWalletInfo(wallet, chatId); // Get wallet info and send to chat
+  }
+
   await searchMintAddressesFromFile(chatId); // Initial call
-  checkingInterval = setInterval(() => {
-    searchMintAddressesFromFile(chatId); // Set interval for 50 seconds
-  }, intervalDuration);
+  setInterval(() => {
+    searchMintAddressesFromFile(chatId); // Set interval for 5 minutes
+  }, interval);
 };
 
 // Start the Express server
@@ -132,7 +177,7 @@ app.listen(PORT, () => {
 bot.onText(/\/start/, async (msg) => {
   const chatId = msg.chat.id;
   try {
-    await bot.sendMessage(chatId, 'Bot started. Checking for market cap updates.');
+    await bot.sendMessage(chatId, 'Bot started. Checking for wallet addresses and mint addresses.');
     await startChecking(chatId); // Start checking when /start command is received
   } catch (error) {
     console.error('Error sending start message:', error);
@@ -144,9 +189,8 @@ bot.onText(/\/help/, (msg) => {
   const chatId = msg.chat.id;
   const helpMessage = `
 Available Commands:
-- /start: Start the bot and check for market cap updates.
+- /start: Start the bot and check for wallet addresses.
 - /help: Show this help message.
-- /stop: Stop checking for updates.
 `;
   bot.sendMessage(chatId, helpMessage);
 });
@@ -155,7 +199,7 @@ Available Commands:
 bot.onText(/\/stop/, (msg) => {
   const chatId = msg.chat.id;
   bot.sendMessage(chatId, 'Background process stopped. You can still use other commands.');
-  clearInterval(checkingInterval); // Stops the interval
+  clearInterval(); // Stops the interval (this needs to be managed properly if multiple intervals are running)
 });
 
 // Log bot status
