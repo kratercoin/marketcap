@@ -1,0 +1,402 @@
+[
+  {
+    "mintAddress": "Bzu1nWVKRFEn7FRumTNrTC4qqxtBaMCMBNY1z7ejpump",
+    "tokenName": "MOGDOG",
+    "tokenPrice": 0.00001584,
+    "liquidity": 16015.16,
+    "marketCap": 15845,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "BzpqoPc44oaHu9SB5hek1GRNjzc4UwFcL4oWusWozm3N",
+    "tokenName": "LumiChill",
+    "tokenPrice": 4.394e-8,
+    "liquidity": 181502.57,
+    "marketCap": 799028,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "95GK6QdJ2fWXr2tcqRm5dQHVBg8Pnaizvro97dk6pump",
+    "tokenName": "Kukuli Coin",
+    "tokenPrice": 0.00004209,
+    "liquidity": 21659.13,
+    "marketCap": 42086,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "EYwnq7q276WVZYpBwPapHGP5DxHJyRr77nGbTQAhLJSi",
+    "tokenName": "",
+    "tokenPrice": 0,
+    "liquidity": 0,
+    "marketCap": 0,
+    "pairsFound": false
+  },
+  {
+    "mintAddress": "GGWhjUDZcdX7nikg68igdRkvYRn1ZcbwCkd3gqwy72UC",
+    "tokenName": "",
+    "tokenPrice": 0,
+    "liquidity": 0,
+    "marketCap": 0,
+    "pairsFound": false
+  },
+  {
+    "mintAddress": "FViMp5phQH2bX81S7Yyn1yXjj3BRddFBNcMCbTH8FCze",
+    "tokenName": "Toad",
+    "tokenPrice": 4.489e-10,
+    "liquidity": 44752.53,
+    "marketCap": 188829,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "XzR7CUMqhDBzbAm4aUNvwhVCxjWGn1KEvqTp3Y8fFCD",
+    "tokenName": "",
+    "tokenPrice": 0,
+    "liquidity": 0,
+    "marketCap": 0,
+    "pairsFound": false
+  },
+  {
+    "mintAddress": "EAvKa9kGRMcQ44Eg3MPbXUP8ZEpfxgd5dToHBRF8m8ui",
+    "tokenName": "Pepewifhat",
+    "tokenPrice": 0.00009263,
+    "liquidity": 50205.73,
+    "marketCap": 92613,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "7YQSwN1kBuV6nZaH6rwbGAQsPQdkj24wdkNeMafdueqi",
+    "tokenName": "",
+    "tokenPrice": 0,
+    "liquidity": 0,
+    "marketCap": 0,
+    "pairsFound": false
+  },
+  {
+    "mintAddress": "EMJM2e8Sgcif3NJcPGWseAuhDnVK8PKgMWkUuAgVY9XG",
+    "tokenName": "",
+    "tokenPrice": 0,
+    "liquidity": 0,
+    "marketCap": 0,
+    "pairsFound": false
+  },
+  {
+    "mintAddress": "8vmfpC295wnxH7mnPw3GpfvD9mCCdJBj81mPfe9PL9Wi",
+    "tokenName": "",
+    "tokenPrice": 0,
+    "liquidity": 0,
+    "marketCap": 0,
+    "pairsFound": false
+  },
+  {
+    "mintAddress": "FA3MT2WxSYfAK163cuLfLPcEesFynHYuTKoDAePK6Zpa",
+    "tokenName": "",
+    "tokenPrice": 0,
+    "liquidity": 0,
+    "marketCap": 0,
+    "pairsFound": false
+  },
+  {
+    "mintAddress": "9rQgfTsMpenaroeK5x1Y2GWh1i22tzYoU1XDC6JhRMg9",
+    "tokenName": "",
+    "tokenPrice": 0,
+    "liquidity": 0,
+    "marketCap": 0,
+    "pairsFound": false
+  },
+  {
+    "mintAddress": "VVWAy5U2KFd1p8AdchjUxqaJbZPBeP5vUQRZtAy8hyc",
+    "tokenName": "Flip.gg | #1 Lootbox Game",
+    "tokenPrice": 0.000001928,
+    "liquidity": 386.32,
+    "marketCap": 32784,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "6NJ1wpyiyrLFAYZaciNcdCvTjW9LHru97V8w2VhKC3GU",
+    "tokenName": "",
+    "tokenPrice": 0,
+    "liquidity": 0,
+    "marketCap": 0,
+    "pairsFound": false
+  },
+  {
+    "mintAddress": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+    "tokenName": "USDT",
+    "tokenPrice": 1.00017,
+    "liquidity": 700973.01,
+    "marketCap": 1890272177,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+    "tokenName": "Jupiter",
+    "tokenPrice": 0.8427,
+    "liquidity": 396344.91,
+    "marketCap": 1137664975,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "BKydRTNdaMJ8B4zPva3YhwUQcpvAsyZaGJnKA6F44fX7",
+    "tokenName": "FakeBiz",
+    "tokenPrice": 0.000003402,
+    "liquidity": 6604.64,
+    "marketCap": 24110,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3",
+    "tokenName": "Pyth Network",
+    "tokenPrice": 0.2737,
+    "liquidity": 324724.02,
+    "marketCap": 992239710,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "5AnPDx9GposBi9jSW2dFfE5QQD3FmXbudoquMNDxpump",
+    "tokenName": "Dollar",
+    "tokenPrice": 0.002447,
+    "liquidity": 282112.98,
+    "marketCap": 2438470,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "7QHnbdbXKLuP12kEoTf98LwMNKeNbw1m7HFsqbZ5pump",
+    "tokenName": "",
+    "tokenPrice": 0,
+    "liquidity": 0,
+    "marketCap": 0,
+    "pairsFound": false
+  },
+  {
+    "mintAddress": "BPyFvucTXQAnZNwXLKeFpDCDS6sAUmdoXcqTWvVttWpp",
+    "tokenName": "",
+    "tokenPrice": 0,
+    "liquidity": 0,
+    "marketCap": 0,
+    "pairsFound": false
+  },
+  {
+    "mintAddress": "35CccxbrUi7fPMCrFo65MZWWWv5vXU1FxWGAx6cUZaku",
+    "tokenName": "",
+    "tokenPrice": 0,
+    "liquidity": 0,
+    "marketCap": 0,
+    "pairsFound": false
+  },
+  {
+    "mintAddress": "EabPk6cfsJJqqmMhZvvL8VpWPmWKQH4XDGfK17kvWhur",
+    "tokenName": "",
+    "tokenPrice": 0,
+    "liquidity": 0,
+    "marketCap": 0,
+    "pairsFound": false
+  },
+  {
+    "mintAddress": "FWqMJ83pYBQNJCUXfebsiowBTmnBL2VePPxpVLqusc3h",
+    "tokenName": "Volvo",
+    "tokenPrice": 3.052e-7,
+    "liquidity": 1854.51,
+    "marketCap": 3037,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "HEW6Lo4XEXrxXFJEsuewWdbKRFz6tVKxyokWF3eMwxAM",
+    "tokenName": "",
+    "tokenPrice": 0,
+    "liquidity": 0,
+    "marketCap": 0,
+    "pairsFound": false
+  },
+  {
+    "mintAddress": "H8uMgaBTAoczhEuZFGZRUECipvyaL72RfF32dQ3tBrkX",
+    "tokenName": "dogwifbeanie",
+    "tokenPrice": 0.00002486,
+    "liquidity": 9152.97,
+    "marketCap": 24827,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "7NmPAxTwCWgAYJBeHcwMViK1Anq3hfTEtospMmCcQyQQ",
+    "tokenName": "CORGEEK",
+    "tokenPrice": 0.0001862,
+    "liquidity": 32132.15,
+    "marketCap": 186099,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "3ZqQkTtiU8z8nxKNZjoA5sjSrRst3UHcVUyk5TrDBovw",
+    "tokenName": "",
+    "tokenPrice": 0,
+    "liquidity": 0,
+    "marketCap": 0,
+    "pairsFound": false
+  },
+  {
+    "mintAddress": "DSrgX3oWAuc9korxYZXi1EjAxd9f1eaNvHtqaK42pump",
+    "tokenName": "",
+    "tokenPrice": 0,
+    "liquidity": 0,
+    "marketCap": 0,
+    "pairsFound": false
+  },
+  {
+    "mintAddress": "Kyonx37Cicy66TxZWaMbqYKqgnDvTCq19KFq32Ugd7c",
+    "tokenName": "Kyon The Martian Inu",
+    "tokenPrice": 0.000008835,
+    "liquidity": 68522.38,
+    "marketCap": 6184761,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "28gBfdqoTdbVJnmqZK4hg9rZ7RGJk4Ru37VrbA15pump",
+    "tokenName": "PUSH",
+    "tokenPrice": 0.0005627,
+    "liquidity": 99530.38,
+    "marketCap": 562724,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "3KroURETdWLyFReapbdh6nTWQgS7Y6rorLY8jb1pJXoM",
+    "tokenName": "elawn moosk",
+    "tokenPrice": 0.0002258,
+    "liquidity": 61819.34,
+    "marketCap": 225881,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "BX9yEgW8WkoWV8SvqTMMCynkQWreRTJ9ZS81dRXYnnR9",
+    "tokenName": "Spike",
+    "tokenPrice": 0.000417,
+    "liquidity": 159959.76,
+    "marketCap": 417014,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "BWWWurbodjGbovFetc3FC6oSbqkdoE62E1XqZ7X4pump",
+    "tokenName": "Salt Bae For The People",
+    "tokenPrice": 0.001761,
+    "liquidity": 149956.74,
+    "marketCap": 1761604,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "85VBFQZC9TZkfaptBWjvUw7YbZjy52A6mjtPGjstQAmQ",
+    "tokenName": "Wormhole Token",
+    "tokenPrice": 0.1932,
+    "liquidity": 254788.1,
+    "marketCap": 498091030,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "DpDuHScSNi6LQZ9hjrwS2fjfgfeoAH1jRgcXt38rDrEw",
+    "tokenName": "ELONWIFHAT",
+    "tokenPrice": 0.00005162,
+    "liquidity": 24351.57,
+    "marketCap": 51599,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "Dnb9dLSXxAarXVexehzeH8W8nFmLMNJSuGoaddZSwtog",
+    "tokenName": "cok the cat",
+    "tokenPrice": 0.000002263,
+    "liquidity": 251434.83,
+    "marketCap": 2260309,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "SCHEvu47HruoNsRSUpBim58UDRFmeGRBAEvRzYLaAKE",
+    "tokenName": "",
+    "tokenPrice": 0,
+    "liquidity": 0,
+    "marketCap": 0,
+    "pairsFound": false
+  },
+  {
+    "mintAddress": "943n9yU2TY24qh5pDKSNX6LnGw4oNYW7RJAjjPc6hmU8",
+    "tokenName": "DIVA 美",
+    "tokenPrice": 0.000001231,
+    "liquidity": 2275.34,
+    "marketCap": 1229,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "Dsad47jgGNoJ8p4LJQ8x4yCFRMHBL7kd1Js3TJj7X52C",
+    "tokenName": "DOUGHGE",
+    "tokenPrice": 0.0001099,
+    "liquidity": 36644.62,
+    "marketCap": 98923,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "hntyVP6YFm1Hg25TN9WGLqM12b8TQmcknKrdu1oxWux",
+    "tokenName": "Helium Network Token",
+    "tokenPrice": 4.89,
+    "liquidity": 283932.71,
+    "marketCap": 824345757,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "HhDRDNMPJY4p8LsUUXYr6Wa6KUCy743brjEwFp1ppump",
+    "tokenName": "",
+    "tokenPrice": 0,
+    "liquidity": 0,
+    "marketCap": 0,
+    "pairsFound": false
+  },
+  {
+    "mintAddress": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
+    "tokenName": "Marinade staked SOL (mSOL)",
+    "tokenPrice": 185.33,
+    "liquidity": 552343.66,
+    "marketCap": 800422807,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "ECMYTGjvXWR3mb5RFEh3F1mAqFBe5EEe53A2n1F1sbpg",
+    "tokenName": "CLYDE",
+    "tokenPrice": 1.788e-9,
+    "liquidity": 165163.37,
+    "marketCap": 1245826,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    "tokenName": "USD Coin",
+    "tokenPrice": 0.9998,
+    "liquidity": 5306740.83,
+    "marketCap": 34506914151,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
+    "tokenName": "dogwifhat",
+    "tokenPrice": 1.69,
+    "liquidity": 2887270.87,
+    "marketCap": 1689014990,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "AJhvnVJy3B56jvBnPzn8BKPCfJvKYAEzLVgVeMgv9bkw",
+    "tokenName": "",
+    "tokenPrice": 0,
+    "liquidity": 0,
+    "marketCap": 0,
+    "pairsFound": false
+  },
+  {
+    "mintAddress": "JD3S1oqnjG5trRTZXpLmKnS7LsKsppyFa51rPBBMWogv",
+    "tokenName": "Caprisun Monkey",
+    "tokenPrice": 0.0007745,
+    "liquidity": 144496.33,
+    "marketCap": 735632,
+    "pairsFound": true
+  },
+  {
+    "mintAddress": "8doS8nzmgVZEaACxALkbK5fZtw4UuoRp4Yt8NEaXfDMb",
+    "tokenName": "WAFFLES",
+    "tokenPrice": 0.01557,
+    "liquidity": 685783.75,
+    "marketCap": 15543229,
+    "pairsFound": true
+  }
+]
