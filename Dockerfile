@@ -8,6 +8,8 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 5000
+ENV PORT 5500
+EXPOSE 8080
+
 
 CMD ["node", "bot.js"]
